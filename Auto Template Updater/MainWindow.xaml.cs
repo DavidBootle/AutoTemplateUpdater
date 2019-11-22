@@ -21,6 +21,10 @@ namespace Auto_Template_Updater
     public partial class MainWindow : Window
     {
         public static string TEMPLATES_FOLDER = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\DJL Templates";
+        public static Tuple<string, string>[] DOWNLOAD_PATHS = { new Tuple<string, string>("https://github.com/TheWeirdSquid/AutoTemplateUpdaterHosting/blob/master/Davy%20Jones'%20Locker%20Generic%20Document.dotx?raw=true", "Standard.dotx"),
+            new Tuple<string, string>("https://github.com/TheWeirdSquid/AutoTemplateUpdaterHosting/blob/master/Generic%20Cover%20Page%20Template%20Latest.dotx?raw=true", "Standard Cover Page.dotx"),
+            new Tuple<string, string>("https://github.com/TheWeirdSquid/AutoTemplateUpdaterHosting/blob/master/DJL%20Newsletter%20Template.dotx", "Newsletter Template.dotx")
+        };
 
         public MainWindow()
         {
@@ -31,6 +35,7 @@ namespace Auto_Template_Updater
         // Open Templates Folder
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            statusBox.Text = "";
             System.Diagnostics.Process process = new System.Diagnostics.Process();
             System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
             startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Normal;
@@ -42,7 +47,25 @@ namespace Auto_Template_Updater
 
         private void Download_Button_Click(object sender, RoutedEventArgs e)
         {
+            statusBox.Text = "";
+            System.Net.WebClient client = new System.Net.WebClient();
+            int i = 1;
+            foreach (Tuple<string, string> pathTuple in DOWNLOAD_PATHS)
+            {
+                statusBox.Text = string.Format("Downloading file {0}/{1}", i, DOWNLOAD_PATHS.Length);
+                client.DownloadFile(pathTuple.Item1, TEMPLATES_FOLDER + "\\" + pathTuple.Item2);
+                i++;
+                
+            }
+            statusBox.Text = "Download complete.";
+        }
 
+        // install fonts
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process process = new System.Diagnostics.Process();
+            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+            // https://stackoverflow.com/questions/21986744/how-to-install-a-font-programmatically-c
         }
     }
 }
