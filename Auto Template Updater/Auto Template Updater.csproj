@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <RootNamespace>Auto_Template_Updater</RootNamespace>
+    <UseWPF>true</UseWPF>
+    <StartupObject>Auto_Template_Updater.App</StartupObject>
+  </PropertyGroup>
+
+</Project>
