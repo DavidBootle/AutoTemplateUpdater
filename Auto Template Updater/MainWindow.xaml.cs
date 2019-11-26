@@ -50,30 +50,27 @@ namespace Auto_Template_Updater
 
             client.DownloadFile("https://github.com/TheWeirdSquid/AutoTemplateUpdaterHosting/blob/master/download_urls.txt?raw=true", TEMPLATES_FOLDER + "\\urls.txt");
             string line;
-            List<Tuple<string, string>> downloadPaths = new List<Tuple<string, string>>();
+            List<Tuple<string, string>> downloadPathsList = new List<Tuple<string, string>>();
             StreamReader file = new StreamReader(TEMPLATES_FOLDER + "\\urls.txt");
             while ((line = file.ReadLine()) != null)
             {
-
+                string[] strings = line.Split('|');
+                Tuple<string, string> downloadTuple = new Tuple<string, string>(strings[0], strings[1]);
+                downloadPathsList.Add(downloadTuple);
             }
+            file.Close();
+            File.Delete(TEMPLATES_FOLDER + "\\urls.txt");
+            Tuple<string, string>[] downloadPaths = downloadPathsList.ToArray();
 
             int i = 1;
-            foreach (Tuple<string, string> pathTuple in DOWNLOAD_PATHS)
+            foreach (Tuple<string, string> pathTuple in downloadPaths)
             {
-                statusBox.Text = string.Format("Downloading file {0}/{1}", i, DOWNLOAD_PATHS.Length);
+                statusBox.Text = string.Format("Downloading file {0}/{1}", i, downloadPaths.Length);
                 client.DownloadFile(pathTuple.Item1, TEMPLATES_FOLDER + "\\" + pathTuple.Item2);
                 i++;
                 
             }
             statusBox.Text = "Download complete.";
-        }
-
-        // install fonts
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            System.Diagnostics.Process process = new System.Diagnostics.Process();
-            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
-            // https://stackoverflow.com/questions/21986744/how-to-install-a-font-programmatically-c
         }
     }
 }

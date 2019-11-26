@@ -10,12 +10,10 @@
         <TextBlock Margin="0,10,10,0" Text="Bootle's Auto File Updater" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" FontWeight="Bold" HorizontalAlignment="Right" Width="780" TextAlignment="Right"/>
         <TextBlock Margin="0,79,10,0" Text="For Davy Jones' Locker" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" TextAlignment="Right" HorizontalAlignment="Right" Width="770"/>
         <Button x:Name="Download_Button" Content="Download New Files" VerticalAlignment="Top" FontSize="16" Click="Download_Button_Click" Margin="0,121,10,0" Height="36" HorizontalAlignment="Right" Width="270"/>
-        <Button Content="Uninstall Auto File Updater" Margin="0,244,10,0" Height="36" VerticalAlignment="Top" FontSize="16" Width="270" HorizontalAlignment="Right"/>
         <Button Content="Open Templates Folder" Margin="0,162,10,0" VerticalAlignment="Top" FontSize="16" Click="Button_Click" Height="36" Width="270" HorizontalAlignment="Right"/>
         <Image HorizontalAlignment="Left" Height="100" Margin="47,92,0,0" VerticalAlignment="Top" Width="100"/>
         <Image HorizontalAlignment="Left" Width="351" Source="C:\Users\lab\Documents\DJL Logo (color).png" Margin="0,0,0,1" Height="354" VerticalAlignment="Bottom"/>
-        <TextBlock Name="statusBox" Margin="0,285,10,0" TextWrapping="Wrap" FontSize="20" HorizontalAlignment="Right" Width="270" Height="80" VerticalAlignment="Top" TextAlignment="Center"/>
-        <Button Content="Install Fonts" Margin="0,203,10,0" VerticalAlignment="Top" Height="36" FontSize="16" Click="Button_Click_1" HorizontalAlignment="Right" Width="270"/>
+        <TextBlock Name="statusBox" Margin="0,203,10,0" TextWrapping="Wrap" FontSize="20" HorizontalAlignment="Right" Width="270" Height="80" VerticalAlignment="Top" TextAlignment="Center"/>
 
     </Grid>
 </Window>
