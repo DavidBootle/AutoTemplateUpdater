@@ -11,8 +11,6 @@
         <TextBlock Margin="0,79,10,0" Text="For Davy Jones' Locker" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" TextAlignment="Right" HorizontalAlignment="Right" Width="770"/>
         <Button x:Name="Download_Button" Content="Download New Files" VerticalAlignment="Top" FontSize="16" Click="Download_Button_Click" Margin="0,121,10,0" Height="36" HorizontalAlignment="Right" Width="270"/>
         <Button Content="Open Templates Folder" Margin="0,162,10,0" VerticalAlignment="Top" FontSize="16" Click="Button_Click" Height="36" Width="270" HorizontalAlignment="Right"/>
-        <Image HorizontalAlignment="Left" Height="100" Margin="47,92,0,0" VerticalAlignment="Top" Width="100"/>
-        <Image HorizontalAlignment="Left" Width="351" Source="C:\Users\lab\Documents\DJL Logo (color).png" Margin="0,0,0,1" Height="354" VerticalAlignment="Bottom"/>
         <TextBlock Name="statusBox" Margin="0,203,10,0" TextWrapping="Wrap" FontSize="20" HorizontalAlignment="Right" Width="270" Height="80" VerticalAlignment="Top" TextAlignment="Center"/>
 
     </Grid>

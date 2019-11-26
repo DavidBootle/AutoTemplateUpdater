@@ -16,7 +16,9 @@
     <LoadFromTemplate>
     </LoadFromTemplate>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'DefaultBuild' " />
+  <PropertyGroup Condition=" '$(Configuration)' == 'DefaultBuild' ">
+    <OutputPath>C:\Users\lab\Documents\Auto Template Updater Builds</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="Installer.aip">
       <SubType>Code</SubType>

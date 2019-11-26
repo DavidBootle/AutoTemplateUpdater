@@ -6,6 +6,12 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Auto Template Updater", "Auto Template Updater\Auto Template Updater.csproj", "{84BAC9E3-F5E1-4E46-A67A-30040DF1E4FA}"
 EndProject
 Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "Installer", "Installer\Installer.aiproj", "{75A786B9-AB13-4BB3-903D-D830C944811A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F751AD6E-86D6-4EE4-8888-6DBC43CA7F8A} = {F751AD6E-86D6-4EE4-8888-6DBC43CA7F8A}
+		{84BAC9E3-F5E1-4E46-A67A-30040DF1E4FA} = {84BAC9E3-F5E1-4E46-A67A-30040DF1E4FA}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Background Document Updater", "Background Document Updater\Background Document Updater.csproj", "{F751AD6E-86D6-4EE4-8888-6DBC43CA7F8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +32,12 @@ Global
 		{75A786B9-AB13-4BB3-903D-D830C944811A}.Debug|Any CPU.Build.0 = DefaultBuild
 		{75A786B9-AB13-4BB3-903D-D830C944811A}.Release|Any CPU.ActiveCfg = DefaultBuild
 		{75A786B9-AB13-4BB3-903D-D830C944811A}.Release|Any CPU.Build.0 = DefaultBuild
+		{F751AD6E-86D6-4EE4-8888-6DBC43CA7F8A}.All|Any CPU.ActiveCfg = Release|Any CPU
+		{F751AD6E-86D6-4EE4-8888-6DBC43CA7F8A}.All|Any CPU.Build.0 = Release|Any CPU
+		{F751AD6E-86D6-4EE4-8888-6DBC43CA7F8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F751AD6E-86D6-4EE4-8888-6DBC43CA7F8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F751AD6E-86D6-4EE4-8888-6DBC43CA7F8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F751AD6E-86D6-4EE4-8888-6DBC43CA7F8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

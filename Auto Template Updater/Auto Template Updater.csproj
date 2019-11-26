@@ -6,6 +6,17 @@
     <RootNamespace>Auto_Template_Updater</RootNamespace>
     <UseWPF>true</UseWPF>
     <StartupObject>Auto_Template_Updater.App</StartupObject>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+    <Company>Davy Jones' Locker</Company>
+    <Authors>David Bootle</Authors>
+    <SignAssembly>false</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <PackageId>AutoTemplateUpdater</PackageId>
+    <Description>Automatically downloads templates for Davy Jones' Locker employees.</Description>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
 
 </Project>
